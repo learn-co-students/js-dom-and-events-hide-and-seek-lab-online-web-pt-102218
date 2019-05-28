@@ -13,7 +13,6 @@ function deepestChild() {
 }
 
 function increaseRankBy(rank) {
-  Array.from(document.getElementsByClassName( 'ranked-list' ))
-    .flatMap(list => Array.from(list.children))
+  Array.from(document.querySelectorAll( '.ranked-list > li' ))
     .forEach(li => li.innerHTML = (parseInt(li.innerHTML) + rank));
 }
